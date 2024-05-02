@@ -24,7 +24,7 @@ namespace GestorDeMusica
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+           
            //TRY CATCH -> IF IT'S NOT STRING
         }
     }
