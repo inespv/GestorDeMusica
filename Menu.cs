@@ -12,11 +12,11 @@ namespace GestorDeMusica
 {
     public partial class Menu : Form
     {
-        AgregarCancion agregar;
+        AgregarCancion anyadir;
+
         public Menu()
         {
             InitializeComponent();
-            agregar = new AgregarCancion();
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -36,7 +36,8 @@ namespace GestorDeMusica
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            agregar.ShowDialog();
+            anyadir = new AgregarCancion();
+            anyadir.ShowDialog();
         }
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -45,7 +46,7 @@ namespace GestorDeMusica
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -54,6 +55,11 @@ namespace GestorDeMusica
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

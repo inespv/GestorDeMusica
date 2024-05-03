@@ -13,6 +13,8 @@ namespace GestorDeMusica
     public partial class Form1 : Form
     {
         Menu menuInicio;
+        public static Gestor gestor = new Gestor();
+
         public Form1()
         {
             InitializeComponent();
