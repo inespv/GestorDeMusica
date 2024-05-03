@@ -12,9 +12,11 @@ namespace GestorDeMusica
 {
     public partial class Form1 : Form
     {
+        Menu menuInicio;
         public Form1()
         {
             InitializeComponent();
+            menuInicio = new Menu();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -22,7 +24,7 @@ namespace GestorDeMusica
         }
         private void Button2_Click(object sender, EventArgs e)
         {
-            label1.Text = "Botón pulsado";
+            menuInicio.ShowDialog();
         }
         private void Label1_Click(object sender, EventArgs e)
         {
