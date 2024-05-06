@@ -21,6 +21,11 @@ namespace GestorDeMusica
             nombreArtistico = " ";
             album = new Album();
         }
+
+        public Artista(string text)
+        {
+        }
+
         public string GetNombreArtistico()
         {
             return nombreArtistico;

@@ -15,6 +15,16 @@ namespace GestorDeMusica
         protected double duracion;
         protected List<Cancion> canciones;
 
+        public Album()
+        {
+            titulo = " ";
+            genero = " ";
+            artista = new Artista();
+            anyo = 0;
+            duracion = 0;
+            canciones = new List<Cancion>();
+        }
+
         public Album(string titulo, string genero, Artista artista,
             int anyo, double duracion, List<Cancion> canciones)
         {
@@ -25,15 +35,11 @@ namespace GestorDeMusica
             this.duracion = duracion;
             this.canciones = canciones;
         }
-        public Album()
+
+        public Album(string text)
         {
-            titulo = " ";
-            genero = " ";
-            artista = new Artista();
-            anyo = 0;
-            duracion = 0;
-            canciones = new List<Cancion>();
         }
+
         public string GetTitulo()
         {
             return titulo;

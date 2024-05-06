@@ -12,7 +12,8 @@ namespace GestorDeMusica
 {
     public partial class Menu : Form
     {
-        AgregarCancion anyadir;
+        Agregar anyadir;
+        Form1 form;
 
         public Menu()
         {
@@ -36,7 +37,7 @@ namespace GestorDeMusica
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            anyadir = new AgregarCancion();
+            anyadir = new Agregar();
             anyadir.ShowDialog();
         }
         private void Button2_Click(object sender, EventArgs e)

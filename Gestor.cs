@@ -8,7 +8,9 @@ namespace GestorDeMusica
 {
     public class Gestor
     {
-        List<Cancion> canciones;
+        Cancion cancion;
+        private List<Cancion> canciones;
+        AgregarCancion agregar;
 
         public Gestor()
         {
@@ -16,9 +18,8 @@ namespace GestorDeMusica
         }
         public void AgregarCancion()
         {
-            Cancion cancion = new Cancion();
-            canciones.Add(new Cancion(cancion.GetTitulo(), cancion.GetGenero(), cancion.GetArtista(), 
-                cancion.GetAnyo(), cancion.GetAlbum(), cancion.GetDuracion()));
+            cancion = new Cancion();
+            canciones.Add(cancion);
         }
     }
 }
