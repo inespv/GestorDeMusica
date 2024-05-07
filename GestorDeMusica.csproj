@@ -95,6 +95,9 @@
     <EmbeddedResource Include="Agregar.resx">
       <DependentUpon>Agregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarAlbum.resx">
+      <DependentUpon>AgregarAlbum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCancion.resx">
       <DependentUpon>AgregarCancion.cs</DependentUpon>
     </EmbeddedResource>

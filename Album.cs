@@ -14,6 +14,7 @@ namespace GestorDeMusica
         protected int anyo;
         protected double duracion;
         protected List<Cancion> canciones;
+        protected bool esVinilo;
 
         public Album()
         {
@@ -22,21 +23,19 @@ namespace GestorDeMusica
             artista = new Artista();
             anyo = 0;
             duracion = 0;
-            canciones = new List<Cancion>();
+            esVinilo = false;
         }
 
         public Album(string titulo, string genero, Artista artista,
-            int anyo, double duracion, List<Cancion> canciones)
+            int anyo, double duracion,bool esVinilo)
         {
             this.titulo = titulo;
             this.genero = genero;
             this.artista = artista;
             this.anyo = anyo;
             this.duracion = duracion;
-            this.canciones = canciones;
+            this.esVinilo = esVinilo;
         }
-
-
         public string GetTitulo()
         {
             return titulo;
@@ -45,12 +44,10 @@ namespace GestorDeMusica
         {
             this.titulo = titulo;
         }
-
         public string GetGenero()
         {
             return genero;
         }
-
         public void SetGenero(string genero)
         {
             this.genero = genero;
@@ -63,12 +60,10 @@ namespace GestorDeMusica
         {
             this.artista = artista;
         }
-
         public int GetAnyo()
         {
             return anyo;
         }
-
         public void SetAnyo(int anyo)
         {
             this.anyo = anyo;
@@ -88,6 +83,14 @@ namespace GestorDeMusica
         public void SetCanciones(List<Cancion> canciones)
         {
             this.canciones = canciones;
+        }
+        public bool GetEsVinilo()
+        {
+            return esVinilo;
+        }
+        public void SetVinilo(bool esVinilo)
+        {
+            this.esVinilo = esVinilo;
         }
         public new virtual string ToString()
         {

@@ -24,29 +24,10 @@ namespace GestorDeMusica
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender)
-        {
-            
-        }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox5.MaxLength = 4;
-           
+            textBox5.MaxLength = 4;   
         }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             textBox6.MaxLength = 4;
