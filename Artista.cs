@@ -9,23 +9,15 @@ namespace GestorDeMusica
     internal class Artista
     {
         string nombreArtistico;
-        Album album;
 
-        public Artista(string nombreArtistico, Album album)
+        public Artista(string nombreArtistico)
         {
             this.nombreArtistico = nombreArtistico;
-            this.album = album;
         }
         public Artista()
         {
             nombreArtistico = " ";
-            album = new Album();
         }
-
-        public Artista(string text)
-        {
-        }
-
         public string GetNombreArtistico()
         {
             return nombreArtistico;
@@ -36,8 +28,12 @@ namespace GestorDeMusica
         }
         public override string ToString()
         {
-            return "Nombre artístico :" + nombreArtistico
-                + "Álbum :" + album;
+            return "Nombre artístico :" + nombreArtistico;
+        }
+        public override bool Equals(object obj)
+        {
+            return obj is Artista artista &&
+                   nombreArtistico == artista.nombreArtistico;
         }
     }
 }

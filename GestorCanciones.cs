@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GestorDeMusica
 {
-    public class Gestor
+    public class GestorCanciones
     {
         Cancion cancion;
-        private List<Cancion> canciones;
-        AgregarCancion agregar;
+        List<Cancion> canciones;
 
-        public Gestor()
+        public GestorCanciones()
         {
              canciones = new List<Cancion>();
         }

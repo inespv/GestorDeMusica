@@ -1,6 +1,6 @@
 ﻿namespace GestorDeMusica
 {
-    partial class Agregar
+    partial class MostrarDatos
     {
         /// <summary>
         /// Required designer variable.
@@ -43,9 +43,9 @@
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(76, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(668, 54);
+            this.label2.Size = new System.Drawing.Size(711, 54);
             this.label2.TabIndex = 14;
-            this.label2.Text = "AÑADIR POR CATEGORÍA";
+            this.label2.Text = "MOSTRAR POR CATEGORÍA";
             // 
             // label1
             // 
@@ -67,7 +67,6 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "CANCIÓN";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -77,7 +76,6 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "ÁLBUM";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -88,7 +86,7 @@
             this.button3.Text = "ARTISTA";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Agregar
+            // MostrarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +97,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Name = "Agregar";
+            this.Name = "MostrarDatos";
             this.Text = "Agregar";
             this.ResumeLayout(false);
             this.PerformLayout();

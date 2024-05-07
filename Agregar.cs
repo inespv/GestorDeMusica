@@ -13,6 +13,8 @@ namespace GestorDeMusica
     public partial class Agregar : Form
     {
         AgregarCancion cancion;
+        AgregarAlbum agregarAlbum;
+
         public Agregar()
         {
             InitializeComponent();
@@ -21,6 +23,11 @@ namespace GestorDeMusica
         {
             cancion = new AgregarCancion();
             cancion.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            agregarAlbum.ShowDialog();
         }
     }
 }

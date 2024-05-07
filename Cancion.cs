@@ -38,7 +38,7 @@ namespace GestorDeMusica
         {
             return titulo;
         }
-        public void SetTitulo(String titulo)
+        public void SetTitulo(string titulo)
         {
             this.titulo = titulo;
         }

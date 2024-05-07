@@ -15,8 +15,8 @@ namespace GestorDeMusica
         List<Cancion> canciones;
         string titulo;
         string genero;
-        Album album;
-        Artista artista;
+        string album;
+        string artista;
         int anyo;
         double duracion;
 
@@ -25,49 +25,45 @@ namespace GestorDeMusica
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender)
         {
-             titulo = Convert.ToString(textBox1.Text);
+            
         }
-
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-             genero = Convert.ToString(textBox3.Text);
+
         }
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-             artista = new Artista(textBox4.Text);
+
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             textBox5.MaxLength = 4;
-            anyo = Convert.ToInt32(textBox5.Text);
+           
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-             album = new Album(textBox2.Text);
+
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             textBox6.MaxLength = 4;
-            duracion = Convert.ToDouble(textBox6.Text);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            canciones = new List<Cancion>(); 
-           
+            canciones = new List<Cancion>();
+
             titulo = textBox1.Text;
             genero = textBox3.Text;
-            album = new Album(textBox2.Text);
-            artista = new Artista();
+            album = textBox2.Text;
+            artista = textBox4.Text;
             anyo.Equals(textBox5);
             duracion.Equals(textBox6.Text);
 
-            canciones.Add(new Cancion(titulo, genero, artista, anyo,
-                    new Album(textBox5.Text), duracion));
+            canciones.Add(new Cancion(titulo, genero, new Artista(),anyo,
+                     new Album(), duracion));
         
             MessageBox.Show("Los datos se han guardado correctamente ");
         }

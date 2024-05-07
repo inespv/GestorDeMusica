@@ -36,9 +36,6 @@ namespace GestorDeMusica
             this.canciones = canciones;
         }
 
-        public Album(string text)
-        {
-        }
 
         public string GetTitulo()
         {

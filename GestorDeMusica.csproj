@@ -52,6 +52,12 @@
     <Compile Include="Agregar.Designer.cs">
       <DependentUpon>Agregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAlbum.Designer.cs">
+      <DependentUpon>AgregarAlbum.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCancion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,12 +73,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gestor.cs" />
+    <Compile Include="GestorAlbumes.cs" />
+    <Compile Include="GestorArtistas.cs" />
+    <Compile Include="GestorCanciones.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarDatos.Designer.cs">
+      <DependentUpon>MostrarDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Plataforma.cs" />
     <Compile Include="Program.cs" />
@@ -89,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarDatos.resx">
+      <DependentUpon>MostrarDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
