@@ -18,7 +18,6 @@ namespace GestorDeMusica
         }
         public void AgregarCancion()
         {
-            cancion = new Cancion();
             canciones.Add(cancion);
         }
     }

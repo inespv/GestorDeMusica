@@ -6,97 +6,105 @@ using System.Threading.Tasks;
 
 namespace GestorDeMusica
 {
-    internal class Album
+    public class Album
     {
-        protected string titulo;
-        protected string genero;
-        protected Artista artista;
-        protected int anyo;
-        protected double duracion;
-        protected List<Cancion> canciones;
-        protected bool esVinilo;
+        private string nombreAlbum;
+        private string genero;
+        private Artista artista;
+        private int anyo;
+        private double duracion;
+        private List<Cancion> canciones;
+        private bool esVinilo;
+
+        protected string NombreAlbum { get => nombreAlbum; set => nombreAlbum = value; }
+        protected string Genero { get => genero; set => genero = value; }
+        protected Artista Artista { get => artista; set => artista = value; }
+        protected int Anyo { get => anyo; set => anyo = value; }
+        protected double Duracion { get => duracion; set => duracion = value; }
+        protected List<Cancion> Canciones { get => canciones; set => canciones = value; }
+        protected bool EsVinilo { get => esVinilo; set => esVinilo = value; }
 
         public Album()
         {
-            titulo = " ";
-            genero = " ";
-            artista = new Artista();
-            anyo = 0;
-            duracion = 0;
-            esVinilo = false;
+            NombreAlbum = " ";
+            Genero = " ";
+            Artista = new Artista();
+            Anyo = 0;
+            Duracion = 0;
+            EsVinilo = false;
         }
 
-        public Album(string titulo, string genero, Artista artista,
+        public Album(string nombreAlbum, string genero, Artista artista,
             int anyo, double duracion,bool esVinilo)
         {
-            this.titulo = titulo;
-            this.genero = genero;
-            this.artista = artista;
-            this.anyo = anyo;
-            this.duracion = duracion;
-            this.esVinilo = esVinilo;
+            this.NombreAlbum = nombreAlbum;
+            this.Genero = genero;
+            this.Artista = artista;
+            this.Anyo = anyo;
+            this.Duracion = duracion;
+            this.EsVinilo = esVinilo;
         }
-        public string GetTitulo()
+        public string GetNombreAlbum()
         {
-            return titulo;
+            return NombreAlbum;
         }
-        public void SetTitulo(string titulo)
+        public void SetNombreAlbum(string nombreAlbum)
         {
-            this.titulo = titulo;
+            this.NombreAlbum = nombreAlbum;
         }
         public string GetGenero()
         {
-            return genero;
+            return Genero;
         }
         public void SetGenero(string genero)
         {
-            this.genero = genero;
+            this.Genero = genero;
         }
         public Artista GetArtista()
         {
-            return artista;
+            return Artista;
         }
         public void SetArtista(Artista artista)
         {
-            this.artista = artista;
+            this.Artista = artista;
         }
         public int GetAnyo()
         {
-            return anyo;
+            return Anyo;
         }
         public void SetAnyo(int anyo)
         {
-            this.anyo = anyo;
+            this.Anyo = anyo;
         }
         public double GetDuracion()
         {
-            return duracion;
+            return Duracion;
         }
         public void SetDuracion(double duracion)
         {
-            this.duracion = duracion;
+            this.Duracion = duracion;
         }
         public List<Cancion> GetCanciones()
         {
-            return canciones;
+            return Canciones;
         }
         public void SetCanciones(List<Cancion> canciones)
         {
-            this.canciones = canciones;
+            this.Canciones = canciones;
         }
         public bool GetEsVinilo()
         {
-            return esVinilo;
+            return EsVinilo;
         }
         public void SetVinilo(bool esVinilo)
         {
-            this.esVinilo = esVinilo;
+            this.EsVinilo = esVinilo;
         }
         public new virtual string ToString()
         {
-            return "Título :" + titulo + " género :" + genero +
-                 "artista :" + artista +
-                  " duración :" + duracion + " año :" + anyo;
+            return "Título :" + NombreAlbum + " género :" + Genero +
+                 "artista :" + Artista +
+                  " duración :" + Duracion + " año :" + Anyo;
         }
     }
 }

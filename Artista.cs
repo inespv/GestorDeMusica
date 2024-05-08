@@ -6,34 +6,36 @@ using System.Threading.Tasks;
 
 namespace GestorDeMusica
 {
-    internal class Artista
+    public class Artista
     {
         string nombreArtistico;
 
+        public string NombreArtistico { get => nombreArtistico; set => nombreArtistico = value; }
+
         public Artista(string nombreArtistico)
         {
-            this.nombreArtistico = nombreArtistico;
+            this.NombreArtistico = nombreArtistico;
         }
         public Artista()
         {
-            nombreArtistico = " ";
+            NombreArtistico = " ";
         }
         public string GetNombreArtistico()
         {
-            return nombreArtistico;
+            return NombreArtistico;
         }
         public void SetNombreArtistico(string nombreArtistico)
         {
-            this.nombreArtistico = nombreArtistico;
+            this.NombreArtistico = nombreArtistico;
         }
         public override string ToString()
         {
-            return "Nombre artístico :" + nombreArtistico;
+            return "Nombre artístico :" + NombreArtistico;
         }
         public override bool Equals(object obj)
         {
             return obj is Artista artista &&
-                   nombreArtistico == artista.nombreArtistico;
+                   NombreArtistico == artista.NombreArtistico;
         }
     }
 }

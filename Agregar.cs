@@ -14,6 +14,7 @@ namespace GestorDeMusica
     {
         AgregarCancion cancion;
         AgregarAlbum agregarAlbum;
+        AgregarArtista agregarArtista;
 
         public Agregar()
         {
@@ -29,6 +30,12 @@ namespace GestorDeMusica
         {
             agregarAlbum = new AgregarAlbum();
             agregarAlbum.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            agregarArtista = new AgregarArtista();
+            agregarArtista.ShowDialog();
         }
     }
 }

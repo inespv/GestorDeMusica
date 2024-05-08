@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeMusica
 {
-    internal class Cancion
+    public class Cancion
     {
         private string titulo;
         private string genero;
@@ -15,80 +15,87 @@ namespace GestorDeMusica
         private int anyo;
         private double duracion;
 
+        public string Titulo { get => titulo; set => titulo = value; }
+        public string Genero { get => genero; set => genero = value; }
+        internal Album Album { get => album; set => album = value; }
+        internal Artista Artista { get => artista; set => artista = value; }
+        public int Anyo { get => anyo; set => anyo = value; }
+        public double Duracion { get => duracion; set => duracion = value; }
+
         public Cancion(string titulo, string genero, Artista artista,
             int anyo, Album album, double duracion)
         {
-            this.titulo = titulo;
-            this.genero = genero;
-            this.artista = artista;
-            this.anyo = anyo;
-            this.album = album;
-            this.duracion = duracion;
+            this.Titulo = titulo;
+            this.Genero = genero;
+            this.Artista = artista;
+            this.Anyo = anyo;
+            this.Album = album;
+            this.Duracion = duracion;
         }
         public Cancion()
         {
-            titulo = " ";
-            genero = " ";
-            album = new Album();
-            artista = new Artista();
-            anyo = 0;
-            duracion = 0;
+            Titulo = " ";
+            Genero = " ";
+            Album = new Album();
+            Artista = new Artista();
+            Anyo = 0;
+            Duracion = 0;
         }
         public string GetTitulo()
         {
-            return titulo;
+            return Titulo;
         }
         public void SetTitulo(string titulo)
         {
-            this.titulo = titulo;
+            this.Titulo = titulo;
         }
         public string GetGenero()
         {
-            return genero;
+            return Genero;
         }
         public void SetGenero(string genero)
         {
-            this.genero = genero;
+            this.Genero = genero;
         }
         public Artista GetArtista()
         {
-            return artista;
+            return Artista;
         }
         public void SetArtista(Artista artista)
         {
-            this.artista = artista;
+            this.Artista = artista;
         }
         public int GetAnyo()
         {
-            return anyo;
+            return Anyo;
         }
 
         public void SetAnyo(int anyo)
         {
-            this.anyo = anyo;
+            this.Anyo = anyo;
         }
 
         public Album GetAlbum()
         {
-            return album;
+            return Album;
         }
         public void SetAlbum(Album album)
         {
-            this.album = album;
+            this.Album = album;
         }
         public double GetDuracion()
         {
-            return duracion;
+            return Duracion;
         }
         public void SetDuracion(double duracion)
         {
-            this.duracion = duracion;
+            this.Duracion = duracion;
         }
         public override string ToString()
         {
-            return "Título :" + titulo + " género :" + genero + "álbum :" + album
-                + "artista :" + artista +
-                  " duración :" + duracion + " año :" + anyo;
+            return "Título :" + Titulo + " género :" + Genero + "álbum :" + Album
+                + "artista :" + Artista +
+                  " duración :" + Duracion + " año :" + Anyo;
         }
     }
 }

@@ -41,11 +41,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(76, 20);
+            this.label2.Location = new System.Drawing.Point(55, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(668, 54);
+            this.label2.Size = new System.Drawing.Size(752, 54);
             this.label2.TabIndex = 14;
-            this.label2.Text = "AÑADIR POR CATEGORÍA";
+            this.label2.Text = "AÑADIR DATOS  CATEGORÍA";
             // 
             // label1
             // 
@@ -53,11 +53,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(201, 97);
+            this.label1.Location = new System.Drawing.Point(178, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(407, 23);
+            this.label1.Size = new System.Drawing.Size(439, 23);
             this.label1.TabIndex = 15;
-            this.label1.Text = "¿De qué categoría deseas añadir datos ?";
+            this.label1.Text = "¿Con qué categoría desea gestionar datos ?";
             // 
             // button1
             // 
@@ -87,6 +87,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "ARTISTA";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Agregar
             // 

@@ -45,7 +45,8 @@ namespace GestorDeMusica
 
             canciones.Add(new Cancion(titulo, genero, new Artista(),anyo,
                      new Album(), duracion));
-        
+       
+            
             MessageBox.Show("Los datos se han guardado correctamente ");
         }
     }

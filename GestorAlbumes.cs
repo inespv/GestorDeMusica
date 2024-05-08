@@ -8,5 +8,16 @@ namespace GestorDeMusica
 {
     internal class GestorAlbumes
     {
+        Album album;
+        List<Album> albums;
+
+        public GestorAlbumes()
+        {
+            albums = new List<Album>();
+        }
+        public void AddArtist()
+        {
+            albums.Add(album);
+        }
     }
 }

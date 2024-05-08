@@ -12,7 +12,7 @@ namespace GestorDeMusica
             int anyo, double duracion, List<Cancion> canciones) 
             : base(titulo,genero,artista,anyo,duracion, esVinilo)
         {
-            this.esVinilo = esVinilo;
+            this.EsVinilo = esVinilo;
         }
     }
 }
