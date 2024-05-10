@@ -183,7 +183,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarAlbum";
             this.Text = "AgregarCancion";
-            this.Load += new System.EventHandler(this.AgregarAlbum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

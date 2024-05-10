@@ -14,48 +14,21 @@ namespace GestorDeMusica
     {
         Agregar anyadir;
         Form1 form;
+        MostrarDatos mostrarDatos;
 
         public Menu()
         {
             InitializeComponent();
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
         }
         private void Button6_Click(object sender, EventArgs e)
         {
             anyadir = new Agregar();
             anyadir.ShowDialog();
         }
-        private void Button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            mostrarDatos = new MostrarDatos();
+            mostrarDatos.ShowDialog();
         }
     }
 }

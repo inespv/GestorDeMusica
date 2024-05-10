@@ -20,5 +20,9 @@ namespace GestorDeMusica
         {
             canciones.Add(cancion);
         }
+        public void MostrarCanciones()
+        {
+
+        }
     }
 }

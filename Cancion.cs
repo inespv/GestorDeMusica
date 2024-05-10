@@ -43,27 +43,27 @@ namespace GestorDeMusica
         }
         public string GetTitulo()
         {
-            return Titulo;
+            return titulo;
         }
         public void SetTitulo(string titulo)
         {
-            this.Titulo = titulo;
+            this.titulo = titulo;
         }
         public string GetGenero()
         {
-            return Genero;
+            return genero;
         }
         public void SetGenero(string genero)
         {
-            this.Genero = genero;
+            this.genero = genero;
         }
         public Artista GetArtista()
         {
-            return Artista;
+            return artista;
         }
         public void SetArtista(Artista artista)
         {
-            this.Artista = artista;
+            this.artista = artista;
         }
         public int GetAnyo()
         {
@@ -72,24 +72,23 @@ namespace GestorDeMusica
 
         public void SetAnyo(int anyo)
         {
-            this.Anyo = anyo;
+            this.anyo = anyo;
         }
-
         public Album GetAlbum()
         {
-            return Album;
+            return album;
         }
         public void SetAlbum(Album album)
         {
-            this.Album = album;
+            this.album = album;
         }
         public double GetDuracion()
         {
-            return Duracion;
+            return duracion;
         }
         public void SetDuracion(double duracion)
         {
-            this.Duracion = duracion;
+            this.duracion = duracion;
         }
         public override string ToString()
         {

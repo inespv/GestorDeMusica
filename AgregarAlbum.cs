@@ -51,10 +51,5 @@ namespace GestorDeMusica
                 esVinilo =true;
             }
         }
-
-        private void AgregarAlbum_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

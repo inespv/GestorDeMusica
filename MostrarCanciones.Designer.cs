@@ -38,6 +38,7 @@
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anyoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(91, 9);
+            this.label3.Location = new System.Drawing.Point(90, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(591, 54);
             this.label3.TabIndex = 13;
@@ -65,13 +66,14 @@
             this.Artista,
             this.generoDataGridViewTextBoxColumn,
             this.anyoDataGridViewTextBoxColumn,
-            this.duracionDataGridViewTextBoxColumn});
+            this.duracionDataGridViewTextBoxColumn,
+            this.Eliminar});
             this.dataGridView1.DataSource = this.cancionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(74, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(99, 91);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(652, 351);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -89,19 +91,19 @@
             // 
             // Album
             // 
+            this.Album.DataPropertyName = "Titulo";
             this.Album.HeaderText = "Album";
             this.Album.MinimumWidth = 6;
             this.Album.Name = "Album";
-            this.Album.ReadOnly = true;
-            this.Album.Width = 150;
+            this.Album.Width = 125;
             // 
             // Artista
             // 
+            this.Artista.DataPropertyName = "Titulo";
             this.Artista.HeaderText = "Artista";
             this.Artista.MinimumWidth = 6;
             this.Artista.Name = "Artista";
-            this.Artista.ReadOnly = true;
-            this.Artista.Width = 150;
+            this.Artista.Width = 125;
             // 
             // generoDataGridViewTextBoxColumn
             // 
@@ -127,12 +129,19 @@
             this.duracionDataGridViewTextBoxColumn.Name = "duracionDataGridViewTextBoxColumn";
             this.duracionDataGridViewTextBoxColumn.Width = 150;
             // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar datos";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Width = 125;
+            // 
             // MostrarCanciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 492);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Name = "MostrarCanciones";
@@ -149,12 +158,13 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource cancionBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn tituloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Album;
         private System.Windows.Forms.DataGridViewTextBoxColumn Artista;
         private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anyoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource cancionBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Eliminar;
     }
 }

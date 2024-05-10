@@ -12,9 +12,9 @@ namespace GestorDeMusica
 {
     public partial class Agregar : Form
     {
+        Menu menu;
         AgregarCancion cancion;
         AgregarAlbum agregarAlbum;
-        AgregarArtista agregarArtista;
 
         public Agregar()
         {
@@ -34,8 +34,8 @@ namespace GestorDeMusica
 
         private void button3_Click(object sender, EventArgs e)
         {
-            agregarArtista = new AgregarArtista();
-            agregarArtista.ShowDialog();
+            menu = new Menu();
+            menu.ShowDialog();
         }
     }
 }

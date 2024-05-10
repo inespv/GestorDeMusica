@@ -18,45 +18,67 @@ namespace GestorDeMusica
         public MostrarCanciones()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             gestorCanciones = new GestorCanciones();
             canciones = new List<Cancion>();
-
-            //canciones.ForEach(canciones => canciones.)
-            
         }
-
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                if(MessageBox.Show("Are you sure you want to delete this song ? ","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    cancionBindingSource.RemoveCurrent();
+                }
+            }
+        }
         private void MostrarCanciones_Load(object sender, EventArgs e)
         {
-
             cancionBindingSource.Add(new Cancion()
             {
-                Titulo= "Folelé ",Genero = "Música urbana ",Album = new Album("Me Muevo con Dios",
-            "Música urbana",new Artista("Cruz Cafuné"),2023,76,false),Anyo =2023,Duracion =76
+                Titulo = "Folelé ",
+                Genero = "Música urbana ",
+                Album = new Album("Me Muevo con Dios", false),
+                Artista = new Artista("Cruz Cafuné"),
+                Anyo = 2023,
+                Duracion = 76,
             });
 
             cancionBindingSource.Add(new Cancion()
             {
                 Titulo = "Cuando Bebe ",
                 Genero = "Reggaeton",
-                Album = new Album("Famouz",
-         "Reggaeton", new Artista("Jhayco,Rafa Pabön"), 2019, 50.54, false),
+                Album = new Album("Famouz", false),
+                Artista =new Artista("Jhayco,Rafa Pabön"),
                 Anyo = 2019,
-                Duracion = 50.54
+                Duracion = 4.04
             });
             cancionBindingSource.Add(new Cancion()
             {
-                Titulo = "Folelé ",
+                Titulo = "Un desperdicio ",
                 Genero = "Música urbana ",
-                Album = new Album("Me Muevo con Dios",
-         "Música urbana", new Artista("Cruz Cafuné"), 2023, 76, false),
-                Anyo = 2023,
-                Duracion = 76
+                Album = new Album("a new star(1993)",true),
+                Artista = new Artista("Rels B"),
+                Anyo = 2024,
+                Duracion = 3.43
             });
-
+            cancionBindingSource.Add(new Cancion()
+            {
+                Titulo = "Un desperdicio ",
+                Genero = "Música urbana ",
+                Album = new Album("a new star(1993)", true),
+                Artista = new Artista("Rels B"),
+                Anyo = 2024,
+                Duracion = 3.43
+            });
+            cancionBindingSource.Add(new Cancion()
+            {
+                Titulo = "46020",
+                Genero = "Reggaeton català",
+                Album = new Album("Cor i foc", false),
+                Artista = new Artista("Maluks"),
+                Anyo = 2023,
+                Duracion = 2.31
+            });
         }
     }
 }

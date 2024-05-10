@@ -61,16 +61,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 171);
+            this.button1.Location = new System.Drawing.Point(32, 171);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 109);
             this.button1.TabIndex = 16;
             this.button1.Text = "CANCIÓN";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(302, 256);
+            this.button2.Location = new System.Drawing.Point(542, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 109);
             this.button2.TabIndex = 17;
@@ -79,12 +80,20 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(563, 171);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(281, 347);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 109);
+            this.button3.Size = new System.Drawing.Size(224, 60);
             this.button3.TabIndex = 18;
-            this.button3.Text = "ARTISTA";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "Volver a la pantalla inicial";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MostrarDatos
             // 
@@ -101,7 +110,6 @@
             this.Text = "Agregar";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

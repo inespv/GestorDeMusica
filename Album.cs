@@ -37,12 +37,17 @@ namespace GestorDeMusica
         public Album(string nombreAlbum, string genero, Artista artista,
             int anyo, double duracion,bool esVinilo)
         {
-            this.NombreAlbum = nombreAlbum;
-            this.Genero = genero;
-            this.Artista = artista;
-            this.Anyo = anyo;
-            this.Duracion = duracion;
-            this.EsVinilo = esVinilo;
+            this.nombreAlbum = nombreAlbum;
+            this.genero = genero;
+            this.artista = artista;
+            this.anyo = anyo;
+            this.duracion = duracion;
+            this.esVinilo = esVinilo;
+        }
+        public Album(string nombreAlbum,bool esVinilo)
+        {
+            this.nombreAlbum = nombreAlbum; 
+            this.esVinilo = esVinilo;
         }
         public string GetNombreAlbum()
         {

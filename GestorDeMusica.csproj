@@ -58,12 +58,6 @@
     <Compile Include="AgregarAlbum.Designer.cs">
       <DependentUpon>AgregarAlbum.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarArtista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarArtista.Designer.cs">
-      <DependentUpon>AgregarArtista.cs</DependentUpon>
-    </Compile>
     <Compile Include="AgregarCancion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +103,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarAlbum.resx">
       <DependentUpon>AgregarAlbum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarArtista.resx">
-      <DependentUpon>AgregarArtista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarCancion.resx">
       <DependentUpon>AgregarCancion.cs</DependentUpon>
