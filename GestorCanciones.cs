@@ -14,7 +14,7 @@ namespace GestorDeMusica
 
         public GestorCanciones()
         {
-             canciones = new List<Cancion>();
+            canciones = new List<Cancion>();
         }
         public void AgregarCancion()
         {
@@ -22,7 +22,7 @@ namespace GestorDeMusica
         }
         public void MostrarCanciones()
         {
-
+            
         }
     }
 }

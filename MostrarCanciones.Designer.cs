@@ -38,7 +38,7 @@
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anyoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -134,7 +135,10 @@
             this.Eliminar.HeaderText = "Eliminar datos";
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 125;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.UseColumnTextForButtonValue = true;
+            this.Eliminar.Width = 150;
             // 
             // MostrarCanciones
             // 
@@ -165,6 +169,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anyoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

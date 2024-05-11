@@ -49,5 +49,10 @@ namespace GestorDeMusica
             
             MessageBox.Show("Los datos se han guardado correctamente ");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

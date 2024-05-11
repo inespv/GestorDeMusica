@@ -23,9 +23,10 @@ namespace GestorDeMusica
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
             {
-                if(MessageBox.Show("Are you sure you want to delete this song ? ","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                if(MessageBox.Show("Estás seguro de que deseas eliminar esta canción?" +
+                    " ","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     cancionBindingSource.RemoveCurrent();
                 }
@@ -33,7 +34,9 @@ namespace GestorDeMusica
         }
         private void MostrarCanciones_Load(object sender, EventArgs e)
         {
-            cancionBindingSource.Add(new Cancion()
+
+
+            /*cancionBindingSource.Add(new Cancion()
             {
                 Titulo = "Folelé ",
                 Genero = "Música urbana ",
@@ -78,7 +81,7 @@ namespace GestorDeMusica
                 Artista = new Artista("Maluks"),
                 Anyo = 2023,
                 Duracion = 2.31
-            });
+            });*/
         }
     }
 }
