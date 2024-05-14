@@ -14,6 +14,7 @@ namespace GestorDeMusica
     {
         Menu menu;
         MostrarCanciones mostrarCanciones;
+        MostrarAlbumes mostrarAlbumes;
         public MostrarDatos()
         {
             InitializeComponent();
@@ -27,6 +28,13 @@ namespace GestorDeMusica
         {
             mostrarCanciones = new MostrarCanciones();
             mostrarCanciones.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mostrarAlbumes = new MostrarAlbumes();
+            mostrarAlbumes.ShowDialog();
+
         }
     }
 }

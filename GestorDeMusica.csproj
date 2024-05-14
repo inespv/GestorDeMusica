@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Album.cs" />
     <Compile Include="Artista.cs" />
+    <Compile Include="Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cancion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarAlbumes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarAlbumes.Designer.cs">
+      <DependentUpon>MostrarAlbumes.cs</DependentUpon>
     </Compile>
     <Compile Include="MostrarCanciones.cs">
       <SubType>Form</SubType>
@@ -107,11 +119,17 @@
     <EmbeddedResource Include="AgregarCancion.resx">
       <DependentUpon>AgregarCancion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarAlbumes.resx">
+      <DependentUpon>MostrarAlbumes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarCanciones.resx">
       <DependentUpon>MostrarCanciones.cs</DependentUpon>

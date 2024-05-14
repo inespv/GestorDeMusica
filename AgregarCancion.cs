@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,18 @@ namespace GestorDeMusica
 {
     public partial class AgregarCancion : Form
     {
+        Cancion cancion ;
         List<Cancion> canciones;
         string titulo;
+        string tituloAlbum;
         string genero;
         string album;
         string artista;
         int anyo;
         double duracion;
+        string nombreArtistico;
+        bool esVinilo;
+
 
         public AgregarCancion()
         {
@@ -43,16 +49,26 @@ namespace GestorDeMusica
             anyo.Equals(textBox5);
             duracion.Equals(textBox6.Text);
 
-            canciones.Add(new Cancion(titulo, genero, new Artista(),anyo,
-                     new Album(), duracion));
-       
-            
+            artista.Equals(new Artista(nombreArtistico));
+            album.Equals(new Album(tituloAlbum,esVinilo));
+
+            canciones.Add(new Cancion(titulo, genero, artista,anyo,album, duracion));
+
             MessageBox.Show("Los datos se han guardado correctamente ");
+
+            for(int i=0; i < canciones.Count; i++)
+            {
+                MessageBox.Show("Las canciones : son " + canciones[i]);
+            }
+            StreamWriter fichero = new StreamWriter("canciones.txt");
+
+            fichero.WriteLine(canciones);
+
+            fichero.Close();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void AgregarCancion_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

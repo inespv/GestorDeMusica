@@ -8,7 +8,7 @@ namespace GestorDeMusica
 {
     internal class GestorAlbumes
     {
-        Album album;
+        Album album ;
         List<Album> albums;
 
         public GestorAlbumes()

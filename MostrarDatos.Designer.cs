@@ -41,7 +41,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(76, 20);
+            this.label2.Location = new System.Drawing.Point(42, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(711, 54);
             this.label2.TabIndex = 14;
@@ -61,7 +61,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 171);
+            this.button1.Location = new System.Drawing.Point(51, 171);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 109);
             this.button1.TabIndex = 16;
@@ -77,6 +77,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "ÁLBUM";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -110,6 +111,7 @@
             this.Text = "Agregar";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

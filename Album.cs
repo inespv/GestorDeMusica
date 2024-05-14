@@ -33,7 +33,11 @@ namespace GestorDeMusica
             Duracion = 0;
             EsVinilo = false;
         }
-
+        public Album(string nombreAlbum, bool esVinilo)
+        {
+            this.nombreAlbum = nombreAlbum;
+            this.esVinilo = esVinilo;
+        }
         public Album(string nombreAlbum, string genero, Artista artista,
             int anyo, double duracion,bool esVinilo)
         {
@@ -42,11 +46,6 @@ namespace GestorDeMusica
             this.artista = artista;
             this.anyo = anyo;
             this.duracion = duracion;
-            this.esVinilo = esVinilo;
-        }
-        public Album(string nombreAlbum,bool esVinilo)
-        {
-            this.nombreAlbum = nombreAlbum; 
             this.esVinilo = esVinilo;
         }
         public string GetNombreAlbum()
@@ -63,7 +62,7 @@ namespace GestorDeMusica
         }
         public void SetGenero(string genero)
         {
-            this.Genero = genero;
+            this.genero = genero;
         }
         public Artista GetArtista()
         {
@@ -71,7 +70,7 @@ namespace GestorDeMusica
         }
         public void SetArtista(Artista artista)
         {
-            this.Artista = artista;
+            this.artista = artista;
         }
         public int GetAnyo()
         {
@@ -79,7 +78,7 @@ namespace GestorDeMusica
         }
         public void SetAnyo(int anyo)
         {
-            this.Anyo = anyo;
+            this.anyo = anyo;
         }
         public double GetDuracion()
         {
@@ -87,7 +86,7 @@ namespace GestorDeMusica
         }
         public void SetDuracion(double duracion)
         {
-            this.Duracion = duracion;
+            this.duracion = duracion;
         }
         public List<Cancion> GetCanciones()
         {
@@ -95,7 +94,7 @@ namespace GestorDeMusica
         }
         public void SetCanciones(List<Cancion> canciones)
         {
-            this.Canciones = canciones;
+            this.canciones = canciones;
         }
         public bool GetEsVinilo()
         {
@@ -103,7 +102,7 @@ namespace GestorDeMusica
         }
         public void SetVinilo(bool esVinilo)
         {
-            this.EsVinilo = esVinilo;
+            this.esVinilo = esVinilo;
         }
         public new virtual string ToString()
         {
