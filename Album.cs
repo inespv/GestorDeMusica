@@ -10,40 +10,40 @@ namespace GestorDeMusica
     {
         private string nombreAlbum;
         private string genero;
-        private Artista artista;
+        private string artista;
         private int anyo;
         private double duracion;
         private List<Cancion> canciones;
         private bool esVinilo;
 
-        protected string NombreAlbum { get => nombreAlbum; set => nombreAlbum = value; }
-        protected string Genero { get => genero; set => genero = value; }
-        protected Artista Artista { get => artista; set => artista = value; }
-        protected int Anyo { get => anyo; set => anyo = value; }
-        protected double Duracion { get => duracion; set => duracion = value; }
-        protected List<Cancion> Canciones { get => canciones; set => canciones = value; }
-        protected bool EsVinilo { get => esVinilo; set => esVinilo = value; }
+        public string NombreAlbum { get => nombreAlbum; set => nombreAlbum = value; }
+        public string Genero { get => genero; set => genero = value; }
+        public int Anyo { get => anyo; set => anyo = value; }
+        public double Duracion { get => duracion; set => duracion = value; }
+        public List<Cancion> Canciones { get => canciones; set => canciones = value; }
+        public bool EsVinilo { get => esVinilo; set => esVinilo = value; }
+        public string Artista { get => artista; set => artista = value; }
 
         public Album()
         {
             NombreAlbum = " ";
             Genero = " ";
-            Artista = new Artista();
+            artista = " ";
             Anyo = 0;
             Duracion = 0;
             EsVinilo = false;
         }
         public Album(string nombreAlbum, bool esVinilo)
         {
-            this.nombreAlbum = nombreAlbum;
-            this.esVinilo = esVinilo;
+            this.NombreAlbum = nombreAlbum;
+            this.EsVinilo = esVinilo;
         }
-        public Album(string nombreAlbum, string genero, Artista artista,
+        public Album(string nombreAlbum, string genero, string artista,
             int anyo, double duracion,bool esVinilo)
         {
-            this.nombreAlbum = nombreAlbum;
+            this.NombreAlbum = nombreAlbum;
             this.genero = genero;
-            this.artista = artista;
+            this.Artista = artista;
             this.anyo = anyo;
             this.duracion = duracion;
             this.esVinilo = esVinilo;
@@ -64,13 +64,13 @@ namespace GestorDeMusica
         {
             this.genero = genero;
         }
-        public Artista GetArtista()
+        public string GetArtista()
         {
             return Artista;
         }
-        public void SetArtista(Artista artista)
+        public void SetArtista(string artista)
         {
-            this.artista = artista;
+            this.Artista = artista;
         }
         public int GetAnyo()
         {

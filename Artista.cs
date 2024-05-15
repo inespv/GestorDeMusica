@@ -14,7 +14,7 @@ namespace GestorDeMusica
 
         public Artista(string nombreArtistico)
         {
-            this.nombreArtistico = nombreArtistico;
+            this.NombreArtistico = nombreArtistico;
         }
         public Artista()
         {

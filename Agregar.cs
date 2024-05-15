@@ -13,18 +13,36 @@ namespace GestorDeMusica
     public partial class Agregar : Form
     {
         Menu menu;
-        AgregarCancion cancion;
+        AgregarCancion agregarCancion;
         AgregarAlbum agregarAlbum;
+        private GestorCanciones gestorCanciones;
 
         public Agregar()
         {
             InitializeComponent();
+            gestorCanciones = new GestorCanciones();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            cancion = new AgregarCancion();
-            cancion.ShowDialog();
+            gestorCanciones.Canciones.Clear();
+            gestorCanciones.LeerArchivo();
+
+            agregarCancion = new AgregarCancion(gestorCanciones);
+
+            DialogResult dialogoAgregarC 
+                = agregarCancion.ShowDialog();
+
         }
+
+
+
+
+
+
+
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {

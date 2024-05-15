@@ -31,7 +31,6 @@ namespace GestorDeMusica
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            albums = new List<Album>();
 
             tituloAlbum = textBox1.Text;
             genero = textBox3.Text;
@@ -40,8 +39,8 @@ namespace GestorDeMusica
             anyo.Equals(textBox5);
             duracion.Equals(textBox6.Text);
 
-            albums.Add(new Album(tituloAlbum, genero, new Artista(nombreArtistico),
-                anyo,duracion,esVinilo));
+            /*albums.Add(new Album(tituloAlbum, genero, new Artista(nombreArtistico),
+                anyo,duracion,esVinilo));*/
 
             MessageBox.Show("Los datos se han guardado correctamente ");
 

@@ -16,6 +16,7 @@ namespace GestorDeMusica
         Agregar anyadir;
         Form1 form;
         MostrarDatos mostrarDatos;
+       
 
         public Menu()
         {
@@ -23,8 +24,10 @@ namespace GestorDeMusica
         }
         private void Button6_Click(object sender, EventArgs e)
         {
+
             anyadir = new Agregar();
             anyadir.ShowDialog();
+
         }
         private void button3_Click(object sender, EventArgs e)
         {

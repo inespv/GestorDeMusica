@@ -16,8 +16,6 @@ namespace GestorDeMusica
         private Artista artista;
         private int anyo;
         private double duracion;
-        string aartist;
-        string aalbum;
 
         public string Titulo { get => titulo; set => titulo = value; }
         public string Genero { get => genero; set => genero = value; }
@@ -44,16 +42,6 @@ namespace GestorDeMusica
             Artista = new Artista();
             Anyo = 0;
             Duracion = 0;
-        }
-        public Cancion(string titulo, string genero, string artista,
-            int anyo, string album, double duracion)
-        {
-            this.titulo = titulo;
-            this.genero = genero;
-            this.aartist = artista;
-            this.anyo = anyo;
-            this.aalbum = album;
-            this.duracion = duracion;
         }
         public string GetTitulo()
         {

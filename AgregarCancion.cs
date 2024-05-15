@@ -13,21 +13,12 @@ namespace GestorDeMusica
 {
     public partial class AgregarCancion : Form
     {
-        Cancion cancion ;
-        List<Cancion> canciones;
-        string titulo;
-        string tituloAlbum;
-        string genero;
-        string album;
-        string artista;
-        int anyo;
-        double duracion;
-        string nombreArtistico;
-        bool esVinilo;
+        private GestorCanciones gestorCanciones;
 
-        public AgregarCancion()
+        public AgregarCancion(GestorCanciones gestorCanciones)
         {
             InitializeComponent();
+            this.gestorCanciones = gestorCanciones;
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -39,36 +30,29 @@ namespace GestorDeMusica
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            canciones = new List<Cancion>();
-
+            string titulo;
+            string tituloAlbum;
+            string genero;
+            string album;
+            string artista;
+            int anyo = 0;
+            double duracion = 0;
+            string nombreArtistico;
+            bool esVinilo;
+      
             titulo = textBox1.Text;
             genero = textBox3.Text;
             album = textBox2.Text;
             artista = textBox4.Text;
             anyo.Equals(textBox5);
             duracion.Equals(textBox6.Text);
-
-            artista.Equals(new Artista(nombreArtistico));
-            album.Equals(new Album(tituloAlbum, esVinilo));
-
-            canciones.Add(new Cancion(titulo, genero, artista, anyo, album, duracion));
-
+           
             MessageBox.Show("Los datos se han guardado correctamente ");
 
-            for (int i = 0; i < canciones.Count; i++)
+            for (int i = 0; i < gestorCanciones.Canciones.Count; i++)
             {
-                MessageBox.Show("Las canciones : son " + canciones[i]);
+                MessageBox.Show("Las canciones : son " + gestorCanciones.Canciones[i]);
             }
-            StreamWriter fichero = new StreamWriter("canciones.txt");
-
-            fichero.WriteLine(canciones);
-
-            fichero.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
