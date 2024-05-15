@@ -103,12 +103,6 @@ namespace GestorDeMusica
         public void SetVinilo(bool esVinilo)
         {
             this.esVinilo = esVinilo;
-        }
-        public new virtual string ToString()
-        {
-            return "Título :" + NombreAlbum + " género :" + Genero +
-                 "artista :" + Artista +
-                  " duración :" + Duracion + " año :" + Anyo;
-        }
+        }      
     }
 }

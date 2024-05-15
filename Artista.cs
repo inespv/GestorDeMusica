@@ -14,7 +14,7 @@ namespace GestorDeMusica
 
         public Artista(string nombreArtistico)
         {
-            this.NombreArtistico = nombreArtistico;
+            this.nombreArtistico = nombreArtistico;
         }
         public Artista()
         {
@@ -26,11 +26,7 @@ namespace GestorDeMusica
         }
         public void SetNombreArtistico(string nombreArtistico)
         {
-            this.NombreArtistico = nombreArtistico;
-        }
-        public override string ToString()
-        {
-            return "Nombre artístico :" + NombreArtistico;
+            this.nombreArtistico = nombreArtistico;
         }
         public override bool Equals(object obj)
         {

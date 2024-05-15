@@ -104,6 +104,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "BUSCAR POR CATEGORÍA";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -120,6 +121,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Volver a la pantalla inicial";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -178,6 +180,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

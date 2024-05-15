@@ -50,13 +50,13 @@ namespace GestorDeMusica
             duracion.Equals(textBox6.Text);
 
             artista.Equals(new Artista(nombreArtistico));
-            album.Equals(new Album(tituloAlbum,esVinilo));
+            album.Equals(new Album(tituloAlbum, esVinilo));
 
-            canciones.Add(new Cancion(titulo, genero, artista,anyo,album, duracion));
+            canciones.Add(new Cancion(titulo, genero, artista, anyo, album, duracion));
 
             MessageBox.Show("Los datos se han guardado correctamente ");
 
-            for(int i=0; i < canciones.Count; i++)
+            for (int i = 0; i < canciones.Count; i++)
             {
                 MessageBox.Show("Las canciones : son " + canciones[i]);
             }
@@ -66,9 +66,10 @@ namespace GestorDeMusica
 
             fichero.Close();
         }
-        private void AgregarCancion_Load(object sender, EventArgs e)
+
+        private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

@@ -12,6 +12,7 @@ namespace GestorDeMusica
 {
     public partial class Menu : Form
     {
+        Buscar buscar;
         Agregar anyadir;
         Form1 form;
         MostrarDatos mostrarDatos;
@@ -29,6 +30,22 @@ namespace GestorDeMusica
         {
             mostrarDatos = new MostrarDatos();
             mostrarDatos.ShowDialog();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            buscar = new Buscar();
+            buscar.ShowDialog();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form = new Form1();
+
+            form.ShowDialog();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

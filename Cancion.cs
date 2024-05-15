@@ -104,14 +104,6 @@ namespace GestorDeMusica
         {
             this.duracion = duracion;
         }
-        
-        public override string ToString()
-        {
-            return "Título :" + Titulo + " género :" + Genero + "álbum :" + Album
-                + "artista :" + Artista +
-                  " duración :" + Duracion + " año :" + Anyo;
-        }
-
         public override bool Equals(object obj)
         {
             return obj is Cancion cancion &&
@@ -122,7 +114,6 @@ namespace GestorDeMusica
                    anyo == cancion.anyo &&
                    duracion == cancion.duracion;
         }
-
         public IEnumerator<Cancion> GetEnumerator()
         {
             throw new NotImplementedException();

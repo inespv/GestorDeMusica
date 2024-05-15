@@ -27,22 +27,7 @@ namespace GestorDeMusica
             string opciones = " ";
             opciones.Equals(comboBox1.Items);
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
-            {
-                if(MessageBox.Show("Estás seguro de que deseas eliminar esta canción?" +
-                    " ","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-                {
-                    cancionBindingSource.Remove(cancion);
-                }
-            }
-            if (comboBox1.Items.Equals("Album"))
-            {
-                dataGridView1.Columns.Remove("Album");
-            }
-        }
-
+       
         private void MostrarCanciones_Load(object sender, EventArgs e)
         {
             MostrarCanciones_Load(sender, e, cancionBindingSource);
@@ -55,7 +40,7 @@ namespace GestorDeMusica
             StreamWriter ficheroMostrar;
             string nombre = "canciones.txt";
 
-            if (!File.Exists(nombre))
+           /* if (!File.Exists(nombre))
             {
                 MessageBox.Show("El archivo se ha creado correctamente");
 
@@ -117,9 +102,7 @@ namespace GestorDeMusica
                 {
                     ficheroMostrar.WriteLine(canciones);
                 }
-
-                MessageBox.Show(" El contenido del fichero es " + ficheroMostrar);
-            } 
+                MessageBox.Show(" El contenido del fichero es " + ficheroMostrar);*/ 
         }
     }
 }
