@@ -25,7 +25,6 @@ namespace GestorDeMusica
         string nombreArtistico;
         bool esVinilo;
 
-
         public AgregarCancion()
         {
             InitializeComponent();

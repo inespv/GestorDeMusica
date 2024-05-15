@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Lcategoria = new System.Windows.Forms.Label();
+            this.comboCategoria = new System.Windows.Forms.ComboBox();
+            this.comboBoxCriterio = new System.Windows.Forms.ComboBox();
+            this.LCriterio = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CategoriaSelected = new System.Windows.Forms.Label();
+            this.CriterioSelected = new System.Windows.Forms.Label();
+            this.seleccion = new System.Windows.Forms.Label();
+            this.seleccion2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,45 +54,58 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "BUSCAR DATOS";
             // 
-            // label2
+            // Lcategoria
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(369, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Insertar categoría por la que desea buscar";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.Lcategoria.AutoSize = true;
+            this.Lcategoria.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lcategoria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Lcategoria.Location = new System.Drawing.Point(12, 93);
+            this.Lcategoria.Name = "Lcategoria";
+            this.Lcategoria.Size = new System.Drawing.Size(369, 20);
+            this.Lcategoria.TabIndex = 1;
+            this.Lcategoria.Text = "Insertar categoría por la que desea buscar";
+            this.Lcategoria.Click += new System.EventHandler(this.label2_Click);
             // 
-            // comboBox1
+            // comboCategoria
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 24);
-            this.comboBox1.TabIndex = 2;
+            this.comboCategoria.FormattingEnabled = true;
+            this.comboCategoria.Items.AddRange(new object[] {
+            "Cancion",
+            "Album",
+            "Artista"});
+            this.comboCategoria.Location = new System.Drawing.Point(164, 135);
+            this.comboCategoria.Name = "comboCategoria";
+            this.comboCategoria.Size = new System.Drawing.Size(217, 24);
+            this.comboCategoria.TabIndex = 2;
+            this.comboCategoria.SelectedIndexChanged += new System.EventHandler(this.comboBuscar_SelectedIndexChanged);
             // 
-            // comboBox2
+            // comboBoxCriterio
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(498, 146);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(217, 24);
-            this.comboBox2.TabIndex = 3;
+            this.comboBoxCriterio.FormattingEnabled = true;
+            this.comboBoxCriterio.Items.AddRange(new object[] {
+            "Titulo",
+            "TituloAlbum",
+            "Genero",
+            "Artista",
+            "Anyo de lanzamiento",
+            "Duracion"});
+            this.comboBoxCriterio.Location = new System.Drawing.Point(544, 135);
+            this.comboBoxCriterio.Name = "comboBoxCriterio";
+            this.comboBoxCriterio.Size = new System.Drawing.Size(217, 24);
+            this.comboBoxCriterio.TabIndex = 3;
+            this.comboBoxCriterio.SelectedIndexChanged += new System.EventHandler(this.comboBoxCriterio_SelectedIndexChanged);
             // 
-            // label3
+            // LCriterio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(494, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(252, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Inserte criterio de búsqueda";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.LCriterio.AutoSize = true;
+            this.LCriterio.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCriterio.ForeColor = System.Drawing.Color.Black;
+            this.LCriterio.Location = new System.Drawing.Point(509, 93);
+            this.LCriterio.Name = "LCriterio";
+            this.LCriterio.Size = new System.Drawing.Size(252, 20);
+            this.LCriterio.TabIndex = 4;
+            this.LCriterio.Text = "Inserte criterio de búsqueda";
+            this.LCriterio.Click += new System.EventHandler(this.label3_Click);
             // 
             // button2
             // 
@@ -119,18 +137,75 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(409, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "label2";
+            // 
+            // CategoriaSelected
+            // 
+            this.CategoriaSelected.AutoSize = true;
+            this.CategoriaSelected.ForeColor = System.Drawing.Color.Black;
+            this.CategoriaSelected.Location = new System.Drawing.Point(12, 190);
+            this.CategoriaSelected.Name = "CategoriaSelected";
+            this.CategoriaSelected.Size = new System.Drawing.Size(151, 16);
+            this.CategoriaSelected.TabIndex = 13;
+            this.CategoriaSelected.Text = "Categoria seleccionada";
+            // 
+            // CriterioSelected
+            // 
+            this.CriterioSelected.AutoSize = true;
+            this.CriterioSelected.ForeColor = System.Drawing.Color.Black;
+            this.CriterioSelected.Location = new System.Drawing.Point(409, 190);
+            this.CriterioSelected.Name = "CriterioSelected";
+            this.CriterioSelected.Size = new System.Drawing.Size(134, 16);
+            this.CriterioSelected.TabIndex = 14;
+            this.CriterioSelected.Text = "Criterio seleccionado";
+            this.CriterioSelected.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // seleccion
+            // 
+            this.seleccion.AutoSize = true;
+            this.seleccion.ForeColor = System.Drawing.Color.Black;
+            this.seleccion.Location = new System.Drawing.Point(213, 190);
+            this.seleccion.Name = "seleccion";
+            this.seleccion.Size = new System.Drawing.Size(65, 16);
+            this.seleccion.TabIndex = 15;
+            this.seleccion.Text = "seleccion";
+            this.seleccion.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // seleccion2
+            // 
+            this.seleccion2.AutoSize = true;
+            this.seleccion2.ForeColor = System.Drawing.Color.Black;
+            this.seleccion2.Location = new System.Drawing.Point(589, 190);
+            this.seleccion2.Name = "seleccion2";
+            this.seleccion2.Size = new System.Drawing.Size(134, 16);
+            this.seleccion2.TabIndex = 16;
+            this.seleccion2.Text = "Criterio seleccionado";
+            this.seleccion2.Click += new System.EventHandler(this.label4_Click_1);
+            // 
             // Buscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.seleccion2);
+            this.Controls.Add(this.seleccion);
+            this.Controls.Add(this.CriterioSelected);
+            this.Controls.Add(this.CategoriaSelected);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LCriterio);
+            this.Controls.Add(this.comboBoxCriterio);
+            this.Controls.Add(this.comboCategoria);
+            this.Controls.Add(this.Lcategoria);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Name = "Buscar";
@@ -145,12 +220,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Lcategoria;
+        private System.Windows.Forms.ComboBox comboCategoria;
+        private System.Windows.Forms.ComboBox comboBoxCriterio;
+        private System.Windows.Forms.Label LCriterio;
         private object button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label CategoriaSelected;
+        private System.Windows.Forms.Label CriterioSelected;
+        private System.Windows.Forms.Label seleccion;
+        private System.Windows.Forms.Label seleccion2;
     }
 }

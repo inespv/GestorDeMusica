@@ -26,6 +26,7 @@ namespace GestorDeMusica
         {
             menu = new Menu();
             menu.ShowDialog();
+            //this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -41,6 +42,31 @@ namespace GestorDeMusica
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBoxCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            seleccion.Text = comboCategoria.Text;
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+            seleccion2.Text = comboBoxCriterio.Text;
         }
     }
 }
