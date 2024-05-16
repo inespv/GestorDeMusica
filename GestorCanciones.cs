@@ -17,7 +17,6 @@ namespace GestorDeMusica
         {
             Canciones = new List<Cancion>();
         }
-
         public List<Cancion> Canciones { get => canciones; set => canciones = value; }
 
         public void AgregarCancion(Cancion cancion)
@@ -35,15 +34,17 @@ namespace GestorDeMusica
                 while(linea != null)
                 {
                     linea = fichero.ReadLine();
-                    string[] trozos;
-                    trozos = linea.Split(':');
+                    if(fichero.ReadLine() != null)
+                    {
+                        string[] strings = linea.Split(':');
+                        string[] trozos = strings;
 
-                    Canciones.Add( new Cancion(trozos[0], trozos[1],
-                       new Artista("Sheila"), Convert.ToInt32(trozos[3]), 
-                       new Album("Album 1 ", "pop", "Sheila", 2024, 45.07, false), 
-                       Convert.ToDouble(trozos[5])));
+                        Canciones.Add(new Cancion(trozos[0], trozos[1],
+                           new Artista("Sheila"), Convert.ToInt32(trozos[3]),
+                           new Album("Album 1 ", "pop", "Carlos Sadness", 2024, 45.07, false),
+                           Convert.ToDouble(trozos[5])));
+                    }
                 } 
-                
             }catch (FileNotFoundException)
             {
                 MessageBox.Show("El fichero no se encontró","Error",

@@ -33,27 +33,18 @@ namespace GestorDeMusica
                 = agregarCancion.ShowDialog();
 
         }
-
-
-
-
-
-
-
-
-
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             agregarAlbum = new AgregarAlbum();
-            agregarAlbum.ShowDialog();
+            DialogResult dialogResult;
+            dialogResult = agregarAlbum.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             menu = new Menu();
-            menu.ShowDialog();
+            DialogResult dialogResult;
+            dialogResult = menu.ShowDialog();
         }
     }
 }

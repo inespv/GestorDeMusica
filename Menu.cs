@@ -16,7 +16,7 @@ namespace GestorDeMusica
         Agregar anyadir;
         Form1 form;
         MostrarDatos mostrarDatos;
-       
+        Modificar modificar;
 
         public Menu()
         {
@@ -24,31 +24,34 @@ namespace GestorDeMusica
         }
         private void Button6_Click(object sender, EventArgs e)
         {
-
             anyadir = new Agregar();
-            anyadir.ShowDialog();
-
+            DialogResult dialogResult;
+            dialogResult = anyadir.ShowDialog();
         }
         private void button3_Click(object sender, EventArgs e)
         {
             mostrarDatos = new MostrarDatos();
-            mostrarDatos.ShowDialog();
+            DialogResult dialogResult;
+            dialogResult = mostrarDatos.ShowDialog();
         }
         private void button2_Click(object sender, EventArgs e)
         {
             buscar = new Buscar();
-            buscar.ShowDialog();
+            DialogResult dialogResult;
+            dialogResult = buscar.ShowDialog();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             form = new Form1();
-
-            form.ShowDialog();
+            DialogResult dialogoResult
+                = form.ShowDialog();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
+            modificar = new Modificar();
+            DialogResult dialogoResult
+              = modificar.ShowDialog();
         }
     }
 }

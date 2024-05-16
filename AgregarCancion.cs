@@ -31,7 +31,7 @@ namespace GestorDeMusica
         private void button1_Click(object sender, EventArgs e)
         {
             string titulo;
-            string tituloAlbum;
+            string nombreAlbum;
             string genero;
             string album;
             string artista;
@@ -48,11 +48,6 @@ namespace GestorDeMusica
             duracion.Equals(textBox6.Text);
            
             MessageBox.Show("Los datos se han guardado correctamente ");
-
-            for (int i = 0; i < gestorCanciones.Canciones.Count; i++)
-            {
-                MessageBox.Show("Las canciones : son " + gestorCanciones.Canciones[i]);
-            }
         }
     }
 }
