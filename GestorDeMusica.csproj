@@ -88,30 +88,6 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modificar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificar.Designer.cs">
-      <DependentUpon>Modificar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MostrarAlbumes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarAlbumes.Designer.cs">
-      <DependentUpon>MostrarAlbumes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MostrarCanciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarCanciones.Designer.cs">
-      <DependentUpon>MostrarCanciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MostrarDatos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarDatos.Designer.cs">
-      <DependentUpon>MostrarDatos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Plataforma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,15 +109,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MostrarAlbumes.resx">
-      <DependentUpon>MostrarAlbumes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MostrarCanciones.resx">
-      <DependentUpon>MostrarCanciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MostrarDatos.resx">
-      <DependentUpon>MostrarDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

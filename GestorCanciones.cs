@@ -41,7 +41,8 @@ namespace GestorDeMusica
 
                         Canciones.Add(new Cancion(trozos[0], trozos[1],
                            new Artista("Sheila"), Convert.ToInt32(trozos[3]),
-                           new Album("Album 1 ", "pop", "Carlos Sadness", 2024, 45.07, false),
+                           new Album("Album 1 ", "pop", "Carlos Sadness",
+                           2024, 45.07, false),
                            Convert.ToDouble(trozos[5])));
                     }
                 } 
@@ -61,10 +62,6 @@ namespace GestorDeMusica
                     fichero.Close();
                 }
             }
-        }
-        public void MostrarCanciones()
-        {
-
         }
     }
 }

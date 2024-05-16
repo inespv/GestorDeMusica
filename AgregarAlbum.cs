@@ -31,10 +31,9 @@ namespace GestorDeMusica
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
             tituloAlbum = textBox1.Text;
             genero = textBox3.Text;
-            
+
             artista = textBox4.Text;
             anyo.Equals(textBox5);
             duracion.Equals(textBox6.Text);
@@ -43,31 +42,6 @@ namespace GestorDeMusica
                 anyo,duracion,esVinilo));*/
 
             MessageBox.Show("Los datos se han guardado correctamente ");
-
-            for (int i = 0; i < albums.Count; i++)
-            {
-                MessageBox.Show("Los datos del álbum son : " + albums[i]);
-            }
-            StreamWriter ficheroAlbumes = new StreamWriter("albumes.txt");
-
-            ficheroAlbumes.WriteLine(albums);
-
-            if (checkBox1.Checked)
-            {
-                esVinilo = true;
-            }
-
-            ficheroAlbumes.Close();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void AgregarAlbum_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

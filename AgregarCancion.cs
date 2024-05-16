@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace GestorDeMusica
     public partial class AgregarCancion : Form
     {
         private GestorCanciones gestorCanciones;
+        private Cancion cancion;
 
         public AgregarCancion(GestorCanciones gestorCanciones)
         {
@@ -46,8 +48,40 @@ namespace GestorDeMusica
             artista = textBox4.Text;
             anyo.Equals(textBox5);
             duracion.Equals(textBox6.Text);
-           
+
+            gestorCanciones = new GestorCanciones();
+            try
+            {
+                StreamWriter ficheroCanciones =
+                new StreamWriter("canciones2.txt");
+                ficheroCanciones.WriteLine(gestorCanciones.Canciones.Count);
+                foreach (Cancion c in gestorCanciones.Canciones)
+                {
+                    ficheroCanciones.WriteLine(c.Titulo);
+                    ficheroCanciones.WriteLine(c.Genero);
+                    ficheroCanciones.WriteLine(c.Artista);
+                    ficheroCanciones.WriteLine(c.Anyo);
+                    ficheroCanciones.WriteLine(c.Album);
+                    ficheroCanciones.WriteLine(c.Duracion);
+                    ficheroCanciones.WriteLine();
+                }
+                ficheroCanciones.Close();
+
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Error, no se ha encontrador el fichero");
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Error");
+            }         
             MessageBox.Show("Los datos se han guardado correctamente ");
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

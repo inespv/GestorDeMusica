@@ -15,8 +15,6 @@ namespace GestorDeMusica
         Buscar buscar;
         Agregar anyadir;
         Form1 form;
-        MostrarDatos mostrarDatos;
-        Modificar modificar;
 
         public Menu()
         {
@@ -28,12 +26,7 @@ namespace GestorDeMusica
             DialogResult dialogResult;
             dialogResult = anyadir.ShowDialog();
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            mostrarDatos = new MostrarDatos();
-            DialogResult dialogResult;
-            dialogResult = mostrarDatos.ShowDialog();
-        }
+ 
         private void button2_Click(object sender, EventArgs e)
         {
             buscar = new Buscar();
@@ -45,13 +38,6 @@ namespace GestorDeMusica
             form = new Form1();
             DialogResult dialogoResult
                 = form.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            modificar = new Modificar();
-            DialogResult dialogoResult
-              = modificar.ShowDialog();
         }
     }
 }

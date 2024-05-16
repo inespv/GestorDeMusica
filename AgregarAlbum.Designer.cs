@@ -160,7 +160,6 @@
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = " ¿Tiene versión en vinilo ?";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // AgregarAlbum
             // 
@@ -183,7 +182,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarAlbum";
             this.Text = "AgregarCancion";
-            this.Load += new System.EventHandler(this.AgregarAlbum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
