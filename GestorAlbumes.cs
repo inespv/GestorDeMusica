@@ -13,11 +13,15 @@ namespace GestorDeMusica
 
         public GestorAlbumes()
         {
-            albums = new List<Album>();
+            Albums = new List<Album>();
         }
-        public void AddArtist()
+
+        public Album Album { get => album; set => album = value; }
+        public List<Album> Albums { get => albums; set => albums = value; }
+
+        public void AddAlbum()
         {
-            albums.Add(album);
+            Albums.Add(Album);
         }
     }
 }

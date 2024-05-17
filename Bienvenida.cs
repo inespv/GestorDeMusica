@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace GestorDeMusica
 {
-    public partial class Form1 : Form
+    public partial class Bienvenida : Form
     {
         private Menu menuInicio;
         private GestorCanciones gestor;
 
-        public Form1()
+        public Bienvenida()
         {
             InitializeComponent();
             menuInicio = new Menu();

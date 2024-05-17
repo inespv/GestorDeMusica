@@ -14,7 +14,7 @@ namespace GestorDeMusica
     {
         Buscar buscar;
         Agregar anyadir;
-        Form1 form;
+        Bienvenida form;
 
         public Menu()
         {
@@ -35,7 +35,7 @@ namespace GestorDeMusica
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            form = new Form1();
+            form = new Bienvenida();
             DialogResult dialogoResult
                 = form.ShowDialog();
         }

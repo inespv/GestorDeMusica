@@ -25,6 +25,8 @@ namespace GestorDeMusica
         }
         public void LeerArchivo()
         {
+            Artista artista = new Artista();
+            Album album = new Album();
             StreamReader fichero =null;
             string linea = " ";
 
@@ -39,11 +41,11 @@ namespace GestorDeMusica
                         string[] strings = linea.Split(':');
                         string[] trozos = strings;
 
-                        Canciones.Add(new Cancion(trozos[0], trozos[1],
-                           new Artista("Sheila"), Convert.ToInt32(trozos[3]),
-                           new Album("Album 1 ", "pop", "Carlos Sadness",
-                           2024, 45.07, false),
-                           Convert.ToDouble(trozos[5])));
+                        /*Canciones.Add(new Cancion(trozos[0], trozos[1],
+                           new Artista(artista.NombreArtistico), Convert.ToInt32(trozos[3]),
+                           new Album(album.NombreAlbum,album.Genero,
+                           album.Artista,album.Anyo,album.Duracion,album.EsVinilo),
+                           Convert.ToDouble(trozos[5])));*/
                     }
                 } 
             }catch (FileNotFoundException)

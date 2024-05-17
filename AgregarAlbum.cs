@@ -14,34 +14,36 @@ namespace GestorDeMusica
 {
     public partial class AgregarAlbum : Form
     {
-        List<Album> albums;
-        List<Cancion> canciones;
-        string tituloAlbum;
-        string genero;
-        string artista;
-        string nombreArtistico;
-        int anyo;
-        double duracion;
-        bool esVinilo;
-        Album album;
-
+        GestorAlbumes gestorAlbumes;
         public AgregarAlbum()
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            tituloAlbum = textBox1.Text;
-            genero = textBox3.Text;
+            gestorAlbumes = new GestorAlbumes();
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Text Documents |*.txt", ValidateNames = true })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    using (StreamWriter ficheroAlbumes = new StreamWriter("albumes.txt", true))
+                    {
+                        await ficheroAlbumes.WriteLineAsync(tituloATB.Text);
+                        await ficheroAlbumes.WriteLineAsync(generoATB.Text);
+                        await ficheroAlbumes.WriteLineAsync(artistaATB.Text);
+                        await ficheroAlbumes.WriteLineAsync(anyoATB.Text);
+                        await ficheroAlbumes.WriteLineAsync(duracionATB.Text);
 
-            artista = textBox4.Text;
-            anyo.Equals(textBox5);
-            duracion.Equals(textBox6.Text);
-
-            /*albums.Add(new Album(tituloAlbum, genero, new Artista(nombreArtistico),
-                anyo,duracion,esVinilo));*/
-
-            MessageBox.Show("Los datos se han guardado correctamente ");
+                        foreach (Album a in gestorAlbumes.Albums)
+                        {
+                            ficheroAlbumes.WriteLine($"{a.NombreAlbum},{a.Genero},{a.Artista}," +
+                                $"{a.Anyo},{a.Duracion},{a.EsVinilo}");
+                        }
+                        MessageBox.Show("Los datos se han guardado correctamente ", "Mensaje"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }

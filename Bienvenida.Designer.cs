@@ -1,6 +1,6 @@
 ﻿namespace GestorDeMusica
 {
-    partial class Form1
+    partial class Bienvenida
     {
         // <summary>
         /// Variable del diseñador necesaria.

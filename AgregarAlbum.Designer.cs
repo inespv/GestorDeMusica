@@ -32,12 +32,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tituloATB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.generoATB = new System.Windows.Forms.TextBox();
+            this.artistaATB = new System.Windows.Forms.TextBox();
+            this.anyoATB = new System.Windows.Forms.TextBox();
+            this.duracionATB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -83,12 +83,12 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Artista";
             // 
-            // textBox1
+            // tituloATB
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 22);
-            this.textBox1.TabIndex = 6;
+            this.tituloATB.Location = new System.Drawing.Point(22, 141);
+            this.tituloATB.Name = "tituloATB";
+            this.tituloATB.Size = new System.Drawing.Size(180, 22);
+            this.tituloATB.TabIndex = 6;
             // 
             // label7
             // 
@@ -100,33 +100,33 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Duración";
             // 
-            // textBox3
+            // generoATB
             // 
-            this.textBox3.Location = new System.Drawing.Point(22, 272);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 22);
-            this.textBox3.TabIndex = 9;
+            this.generoATB.Location = new System.Drawing.Point(22, 272);
+            this.generoATB.Name = "generoATB";
+            this.generoATB.Size = new System.Drawing.Size(180, 22);
+            this.generoATB.TabIndex = 9;
             // 
-            // textBox4
+            // artistaATB
             // 
-            this.textBox4.Location = new System.Drawing.Point(22, 391);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 22);
-            this.textBox4.TabIndex = 10;
+            this.artistaATB.Location = new System.Drawing.Point(22, 391);
+            this.artistaATB.Name = "artistaATB";
+            this.artistaATB.Size = new System.Drawing.Size(180, 22);
+            this.artistaATB.TabIndex = 10;
             // 
-            // textBox5
+            // anyoATB
             // 
-            this.textBox5.Location = new System.Drawing.Point(495, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 22);
-            this.textBox5.TabIndex = 11;
+            this.anyoATB.Location = new System.Drawing.Point(495, 141);
+            this.anyoATB.Name = "anyoATB";
+            this.anyoATB.Size = new System.Drawing.Size(180, 22);
+            this.anyoATB.TabIndex = 11;
             // 
-            // textBox6
+            // duracionATB
             // 
-            this.textBox6.Location = new System.Drawing.Point(495, 272);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(180, 22);
-            this.textBox6.TabIndex = 12;
+            this.duracionATB.Location = new System.Drawing.Point(495, 272);
+            this.duracionATB.Name = "duracionATB";
+            this.duracionATB.Size = new System.Drawing.Size(180, 22);
+            this.duracionATB.TabIndex = 12;
             // 
             // label2
             // 
@@ -165,17 +165,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.duracionATB);
+            this.Controls.Add(this.anyoATB);
+            this.Controls.Add(this.artistaATB);
+            this.Controls.Add(this.generoATB);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tituloATB);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -193,12 +193,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tituloATB;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox generoATB;
+        private System.Windows.Forms.TextBox artistaATB;
+        private System.Windows.Forms.TextBox anyoATB;
+        private System.Windows.Forms.TextBox duracionATB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
