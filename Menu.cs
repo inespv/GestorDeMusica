@@ -38,6 +38,7 @@ namespace GestorDeMusica
             form = new Bienvenida();
             DialogResult dialogoResult
                 = form.ShowDialog();
+            this.Hide();
         }
     }
 }

@@ -16,9 +16,6 @@ namespace GestorDeMusica
     public partial class AgregarCancion : Form
     {
         private GestorCanciones gestorCanciones;
-        private Cancion cancion;
-        private Album album;
-        private Artista artista;
 
         public AgregarCancion(GestorCanciones gestorCanciones)
         {
@@ -35,8 +32,8 @@ namespace GestorDeMusica
         } 
         private async void button1_Click(object sender, EventArgs e)
         {
-            using(SaveFileDialog sfd = new SaveFileDialog()
-            {Filter="Text Documents |*.txt",ValidateNames=true })
+            using (SaveFileDialog sfd = new SaveFileDialog()
+            { Filter = "Text Documents |*.txt", ValidateNames = true })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -46,18 +43,17 @@ namespace GestorDeMusica
                         await ficheroCanciones.WriteLineAsync(generoTB.Text);
                         await ficheroCanciones.WriteLineAsync(artistaTB.Text);
                         await ficheroCanciones.WriteLineAsync(anyoTB.Text);
-                        await ficheroCanciones.WriteLineAsync(albumTB.Text);              
+                        await ficheroCanciones.WriteLineAsync(albumTB.Text);
                         await ficheroCanciones.WriteLineAsync(duracionTB.Text);
 
                         foreach (Cancion c in gestorCanciones.Canciones)
                         {
-                            ficheroCanciones.WriteLine($"{c.Titulo},{c.Genero},{c.Artista}," +
-                                $"{c.Anyo},{c.Album},{c.Duracion}");
+                            ficheroCanciones.Write($"{c.Titulo};{c.Genero};{c.Artista};" 
+                                +$"{c.Anyo};{c.Album};" + $"{c.Duracion}");
                         }
-                        MessageBox.Show("Los datos se han guardado correctamente ","Mensaje"
-                            ,MessageBoxButtons.OK,MessageBoxIcon.Information);
-
-                    }
+                        MessageBox.Show("Los datos se han guardado correctamente ", "Mensaje"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }            
                 }
             }
         }
