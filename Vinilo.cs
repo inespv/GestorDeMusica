@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeMusica
 {
-    internal class Vinilo : Album
+    internal abstract class Vinilo : Album
     {
         public Vinilo (bool esVinilo, string titulo, string genero, string artista,
             int anyo, double duracion, List<Cancion> canciones) 

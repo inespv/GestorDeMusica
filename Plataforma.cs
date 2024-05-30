@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeMusica
 {
-    internal class Plataforma
+    internal abstract class Plataforma
     {
         string nombre;
     }
